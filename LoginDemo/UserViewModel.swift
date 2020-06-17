@@ -15,13 +15,14 @@ class UserViewModel: ObservableObject {
     @Published var username = ""
     @Published var password = ""
     @Published var passwordAgain = ""
-    
-    var bag = Set<AnyCancellable>()
+        
     // Output
     @Published var isValid = false
     @Published var usernameMessage = ""
     @Published var passwordMessage = ""
     
+    // Enviroments
+    var bag = Set<AnyCancellable>()
     private var isPasswordEmptyPublisher: AnyPublisher<Bool, Never> {
         $password
             .debounce(for: 0.8, scheduler: RunLoop.main)
@@ -122,7 +123,7 @@ class UserViewModel: ObservableObject {
         isUsernameValidPublisher
             .receive(on: RunLoop.main)
             .map { valid in
-                valid ? "": "UserName phải có ít nhất 3 ký tự!"
+                valid ? "": "Tên đăng nhập phải có ít nhất 3 ký tự!"
         }
         .assign(to: \.usernameMessage, on: self)
         .store(in: &bag)
