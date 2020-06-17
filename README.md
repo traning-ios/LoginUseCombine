@@ -1,4 +1,4 @@
 # LoginUseCombine
 Phiên bản Việt Nam
 Hello
-![Drag Racing](image/result.jpg)
+![kết quả](./image/result.jpg)
