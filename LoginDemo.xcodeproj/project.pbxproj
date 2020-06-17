@@ -63,7 +63,6 @@
 		C60CF0A62499A60100A342C8 /* LoginDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDemoUITests.swift; sourceTree = "<group>"; };
 		C60CF0A82499A60100A342C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C60CF0B42499A62000A342C8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		C60CF0C22499B14700A342C8 /* LoginDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +149,6 @@
 				C60CF08F2499A60100A342C8 /* LaunchScreen.storyboard */,
 				C60CF0922499A60100A342C8 /* Info.plist */,
 				C60CF08C2499A60100A342C8 /* Preview Content */,
-				C60CF0C22499B14700A342C8 /* LoginDemo-Bridging-Header.h */,
 			);
 			path = LoginDemo;
 			sourceTree = "<group>";
@@ -600,7 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codetoanbug.quynhlx.LoginDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LoginDemo/LoginDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,7 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codetoanbug.quynhlx.LoginDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LoginDemo/LoginDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

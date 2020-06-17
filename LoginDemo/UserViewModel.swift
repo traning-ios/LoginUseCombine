@@ -22,7 +22,8 @@ class UserViewModel: ObservableObject {
     @Published var passwordMessage = ""
     
     // Enviroments
-    var bag = Set<AnyCancellable>()
+    private var bag = Set<AnyCancellable>()
+    
     private var isPasswordEmptyPublisher: AnyPublisher<Bool, Never> {
         $password
             .debounce(for: 0.8, scheduler: RunLoop.main)
@@ -64,7 +65,7 @@ class UserViewModel: ObservableObject {
         .eraseToAnyPublisher()
     }
     
-    enum PasswordCheck {
+    private enum PasswordCheck {
         case valid
         case empty
         case noMatch
@@ -104,8 +105,7 @@ class UserViewModel: ObservableObject {
         }
         .eraseToAnyPublisher()
     }
-    
-    
+        
     init() {
         $username.debounce(for: 0.8, scheduler: RunLoop.main)
             .removeDuplicates()
@@ -144,7 +144,5 @@ class UserViewModel: ObservableObject {
         }
         .assign(to: \.passwordMessage, on: self)
         .store(in: &bag)
-        
-        
     }
 }
