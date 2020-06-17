@@ -15,16 +15,16 @@ struct ContentView: View {
   var body: some View {
     Form {
       Section(footer: Text(userViewModel.usernameMessage).foregroundColor(.red)) {
-        TextField("Username", text: $userViewModel.username)
+        TextField("Tên đăng nhập", text: $userViewModel.username)
           .autocapitalization(.none)
         }
         Section(footer: Text(userViewModel.passwordMessage).foregroundColor(.red)) {
-          SecureField("Password", text: $userViewModel.password)
-          SecureField("Password again", text: $userViewModel.passwordAgain)
+          SecureField("Nhập mật khẩu", text: $userViewModel.password)
+          SecureField("Nhập lại mật khẩu", text: $userViewModel.passwordAgain)
        }
        Section {
          Button(action: { }) {
-           Text("Sign up")
+           Text("Đăng ký")
          }.disabled(!userViewModel.isValid)
        }
      }
