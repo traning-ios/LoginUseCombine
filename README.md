@@ -1,4 +1,4 @@
 # LoginUseCombine
 Phiên bản Việt Nam
 Hello
-![kết quả](./image/result.png)
+![kết quả](./image/image.png)
